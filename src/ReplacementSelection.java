@@ -1,5 +1,3 @@
-import java.io.FileNotFoundException;
-import java.io.RandomAccessFile;
 
 public class ReplacementSelection {
 
@@ -194,8 +192,6 @@ public class ReplacementSelection {
         while (effectiveRecordSize > 0) {
             if (o == outputBuffer.length) {
                 for (int k = 0; k < outputBuffer.length; k++) {
-                    // rf.appendAtOffset(outputBuffer[k].getCompleteRecord(),
-                    // tempOffset);
                     rf.writeRecord(outputBuffer[k].getCompleteRecord(),
                         tempOffset);
                     tempOffset += RECORD_SIZE;
@@ -234,8 +230,6 @@ public class ReplacementSelection {
         }
         if (o > 0) {
             for (int k = 0; k < o; k++) {
-                // rf.appendAtOffset(outputBuffer[k].getCompleteRecord(),
-                // tempOffset);
                 rf.writeRecord(outputBuffer[k].getCompleteRecord(), tempOffset);
                 tempOffset += RECORD_SIZE;
             }
@@ -263,13 +257,6 @@ public class ReplacementSelection {
             RECORD_SIZE, BLOCK_RECORDS);
         runfile = new BinaryFileOperator(runFileName, RECORD_SIZE,
             BLOCK_RECORDS);
-        // long j = finalRecord.runFileOffset;
-        // while (j < runfile.getEndOffset()) {
-        // byte[] b = new byte[RECORD_SIZE];
-        // runfile.getRecord(b, j);
-        // outfile.writeAtCurrent(b);
-        // j += RECORD_SIZE;
-        // }
         outfile.copyFromFile(runfile, finalRecord.runFileOffset,
             finalRecord.runLength * RECORD_SIZE);
         outfile.closeFile();
