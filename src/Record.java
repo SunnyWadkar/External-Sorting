@@ -3,8 +3,9 @@ import java.nio.ByteBuffer;
 /**
  * Holds a single record
  * 
- * @author CS Staff
- * @version 2020-10-15
+ * @author Pranav Chimote pchimote
+ * @author Sunny Wadkar sunnywadkar
+ * @version 2020-11-12
  */
 public class Record implements Comparable<Record> {
 
@@ -42,6 +43,11 @@ public class Record implements Comparable<Record> {
     }
 
 
+    /**
+     * Returns the object's ID
+     * 
+     * @return the ID
+     */
     public long getID() {
         ByteBuffer buff = ByteBuffer.wrap(completeRecord);
         return buff.getLong();

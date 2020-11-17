@@ -2,14 +2,15 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /**
- * {Project Description Here}
+ * Implement External Sorting using Replacement Selection
  */
 
 /**
  * The class containing the main method.
  *
- * @author {Your Name Here}
- * @version {Put Something Here}
+ * @author Pranav Chimote pchimote
+ * @author Sunny Wadkar sunnywadkar
+ * @version 2020-11-12
  */
 
 // On my honor:

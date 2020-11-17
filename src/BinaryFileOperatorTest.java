@@ -1,12 +1,21 @@
 import java.io.IOException;
-
 import student.TestCase;
 
+/**
+ * Tests for Binary File Operator class
+ * 
+ * @author Pranav Chimote pchimote
+ * @author Sunny Wadkar sunnywadkar
+ * @version 2020-11-12
+ */
 public class BinaryFileOperatorTest extends TestCase {
 
+    /**
+     * Test 1
+     */
     public void testBinaryFileOperator() {
         try {
-            Genfile_proj3.genTestFile("sampleInput8.bin", 8);
+            GenBinaryFile.genTestFile("sampleInput8.bin", 8);
             BinaryFileOperator bf = new BinaryFileOperator("sampleInput8.bin",
                 16, 512);
             assertNotNull(bf);
@@ -19,9 +28,12 @@ public class BinaryFileOperatorTest extends TestCase {
     }
 
 
+    /**
+     * Test 2
+     */
     public void testBinaryFileOperator1() {
         try {
-            Genfile_proj3.genTestFile("sampleInput8.bin", 8);
+            GenBinaryFile.genTestFile("sampleInput8.bin", 8);
             BinaryFileOperator bf = new BinaryFileOperator("sampleInput8.bin",
                 16, 512);
             assertNotNull(bf);

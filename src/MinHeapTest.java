@@ -1,8 +1,11 @@
 import student.TestCase;
 
 /**
- * @author {Your Name Here}
- * @version {Put Something Here}
+ * Tests for Min Heap
+ * 
+ * @author Pranav Chimote pchimote
+ * @author Sunny Wadkar sunnywadkar
+ * @version 2020-11-12
  */
 public class MinHeapTest extends TestCase {
 
@@ -19,6 +22,9 @@ public class MinHeapTest extends TestCase {
     }
 
 
+    /**
+     * Test Min Heap Insert
+     */
     public void testMinHeapInsert() {
         Integer[] a = new Integer[10];
         a[0] = 45;
@@ -39,6 +45,9 @@ public class MinHeapTest extends TestCase {
     }
 
 
+    /**
+     * Test Min Heap Remove
+     */
     public void testMinremove() {
         Integer[] a = { 45, 32, 90, 5, 78, 2, 54, 55, 10 };
         MinHeap<Integer> h = new MinHeap<Integer>(a, 9, 9);
@@ -60,6 +69,9 @@ public class MinHeapTest extends TestCase {
     }
 
 
+    /**
+     * Test Replacement selection methods
+     */
     public void testRSMethods() {
         Integer[] a = { 45, 32, 90, 5, 78, 2, 54, 55, 10 };
         MinHeap<Integer> h = new MinHeap<Integer>(a, 9, 9);
@@ -83,6 +95,9 @@ public class MinHeapTest extends TestCase {
     }
 
 
+    /**
+     * Test other methods
+     */
     public void testOther() {
         Integer[] a = { 50 };
         MinHeap<Integer> h = new MinHeap<Integer>(a, 1, 1);

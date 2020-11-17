@@ -5,8 +5,9 @@ import student.TestCase;
 /**
  * Holds a single record
  * 
- * @author CS Staff
- * @version 2020-10-15
+ * @author Pranav Chimote pchimote
+ * @author Sunny Wadkar sunnywadkar
+ * @version 2020-11-12
  */
 public class RecordTest extends TestCase {
 
@@ -36,7 +37,7 @@ public class RecordTest extends TestCase {
 
 
     /**
-     * Tests the first constructor
+     * Tests Compare
      */
     public void testCompareTo() {
         Record rec = new Record(aBite);
